@@ -1,0 +1,61 @@
+// Copyright (c) 2018 Garfield Lee
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+.izumiAbout {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    width: 100%;
+    height: calc(@font-big * 4);
+
+    margin-right: 16.5%;
+
+    .name {
+        display: block;
+
+        // font style
+        font-size: @font-big;
+        white-space: nowrap;
+        position: relative;
+        
+        rt {
+            position: absolute;
+            top: 0;
+            left: 88%;
+        }
+    }
+
+    .links {
+        align-self: flex-start;
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-top: @font-base / 3;
+            margin-right: @font-base;
+
+            a {
+                color: inherit;
+                font-size: @font-base;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.wmvl {
+    .writing-mode;
+}
+
+.tk-shsj {
+    font-family: "source-han-serif-japanese",serif;
+}
+
+.tk-shnj {
+    font-family: "source-han-sans-japanese",sans-serif;
+}
