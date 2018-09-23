@@ -3,54 +3,80 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-.izumiAbout {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+/* Desktops and laptops ----------- */
+// Like 1366 * 768
+@media only screen and (min-width : 1224px) {
+    .izumiAbout {
+        flex-direction: row-reverse;
+        align-items: center;
 
-    width: 100%;
-    height: calc(@font-big * 4);
+        margin-right: 10%;
+        height: calc(@font-big * 4);
 
-    margin-right: 16.5%;
+        .name {
+            // font style
+            font-size: @font-big;
 
-    .name {
-        display: block;
+            position: relative; // Firefox hack.
 
-        // font style
-        font-size: @font-big;
-        white-space: nowrap;
-        position: relative;
-        
-        rt {
-            position: absolute;
-            top: 0;
-            left: 88%;
+            rt {
+                // Firefox hack, only Firefox need this.
+                position: absolute;
+                top: 0;
+                left: 88%;
+            }
+        }
+
+        .links {
+            align-self: flex-start;
+
+            li {
+                margin-top: @font-base / 3;
+                margin-right: @font-base;
+    
+                a {
+                    font-size: @font-base;
+                }
+            }
         }
     }
 
-    .links {
-        align-self: flex-start;
+    .wmvl {
+        .writing-mode;
+    }
+}
 
+/* Large screens ----------- */
+// Like 1920 * 1080
+@media only screen and (min-width : 1824px) {
+    .izumiAbout {
+        margin-right: 16%;
+    }
+}
+
+.izumiAbout {
+    display: flex;
+    width: 100%;
+
+    .name {
+        white-space: nowrap;
+    }
+
+    .links {
         list-style-type: none;
         padding: 0;
         margin: 0;
 
         li {
-            margin-top: @font-base / 3;
-            margin-right: @font-base;
-
             a {
                 color: inherit;
-                font-size: @font-base;
                 text-decoration: none;
             }
         }
     }
 }
 
-.wmvl {
-    .writing-mode;
-}
+
 
 .tk-shsj {
     font-family: "source-han-serif-japanese",serif;

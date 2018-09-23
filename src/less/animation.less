@@ -3,7 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-@keyframes move {
+@keyframes moveLeft {
     from {
         opacity: 0;
         transform: translateX(100%);
@@ -14,53 +14,59 @@
     }
 }
 
+@media only screen and (min-width : 1224px) {
+    .animation {
+        animation-name: moveLeft;
+    }
+
+    .izumiAbout {
+        .name {
+            animation-delay: 1.8s;
+            animation-duration: 0.8s;
+        }
+    
+        .links {
+            li:nth-child(1) {
+                animation-delay: 2.6s;
+                animation-duration: 0.6s;
+            }
+    
+            li:nth-child(2) {
+                animation-delay: 3.2s;
+                animation-duration: 0.6s;
+            }
+    
+            li:nth-child(3) {
+                animation-delay: 3.8s;
+                animation-duration: 0.4s;
+            }
+    
+            li:nth-child(4) {
+                animation-delay: 4.2s;
+                animation-duration: 0.4s;
+            }
+    
+            li:nth-child(5) {
+                animation-delay: 4.6s;
+                animation-duration: 0.4s;
+            }
+    
+            li:nth-child(6) {
+                animation-delay: 5s;
+                animation-duration: 0.4s;
+            }
+        }
+    }
+}
+
 .animation {
-    animation-name: move;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
 
-.d-01 {
+.avatar {
+    animation-name: moveLeft;
     animation-delay: 0.8s;
     animation-duration: 1s;
-}
-
-.izumiAbout {
-    .name {
-        animation-delay: 1.8s;
-        animation-duration: 0.8s;
-    }
-
-    .links {
-        li:nth-child(1) {
-            animation-delay: 2.6s;
-            animation-duration: 0.6s;
-        }
-
-        li:nth-child(2) {
-            animation-delay: 3.2s;
-            animation-duration: 0.6s;
-        }
-
-        li:nth-child(3) {
-            animation-delay: 3.8s;
-            animation-duration: 0.4s;
-        }
-
-        li:nth-child(4) {
-            animation-delay: 4.2s;
-            animation-duration: 0.4s;
-        }
-
-        li:nth-child(5) {
-            animation-delay: 4.6s;
-            animation-duration: 0.4s;
-        }
-
-        li:nth-child(6) {
-            animation-delay: 5s;
-            animation-duration: 0.4s;
-        }
-    }
 }
