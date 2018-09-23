@@ -7,7 +7,6 @@
 
 const Merge = require('webpack-merge');
 const Webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Common = require('./webpack.common');
 
 module.exports = Merge(Common, {
@@ -29,11 +28,7 @@ module.exports = Merge(Common, {
     filename: 'main.js'
   },
   plugins: [
-    new Webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
+    new Webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
     contentBase: './dist',
