@@ -7,6 +7,7 @@
 
 const Merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MediaQueryPlugin = require('media-query-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -22,6 +23,7 @@ module.exports = Merge(Common, {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          MediaQueryPlugin.loader,
           'less-loader'
         ]
       }
@@ -34,6 +36,13 @@ module.exports = Merge(Common, {
     new MiniCssExtractPlugin({
       filename: '[name].[chunkhash].css',
       chunkFilename: '[id].[chunkhash].css'
+    }),
+    new MediaQueryPlugin({
+      include: [ 'main'],
+      queries: {
+        'only screen and (min-width : 1224px)': 'des',
+        'only screen and (min-width : 1824px)': 'des'
+      }
     }),
     new CompressionPlugin({
       test: /\.(png|svg|jpg|gif|css|js)$/
