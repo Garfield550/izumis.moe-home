@@ -8,6 +8,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 
 module.exports = {
@@ -36,9 +37,17 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      inject: 'body',
-      hash: true,
-      minify: true
+      title: '神楽坂泉 - Kagurazakai Izumi',
+      inject: false,
+      hash: true
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/icon.jpg',
+      title: '神楽坂泉',
+      icons: {
+        twitter: false,
+        windows: true
+      }
     })
   ]
 };
