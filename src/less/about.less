@@ -18,12 +18,16 @@
             font-size: @font-big;
 
             position: relative; // Firefox hack.
+            display: block; // Edge hack.
 
             rt {
                 // Firefox hack, only Firefox need this.
                 position: absolute;
                 top: 0;
                 left: 88%;
+
+                // Edge hack, only Microsoft Edge need this.
+                display: block;
             }
         }
 
@@ -75,8 +79,6 @@
         }
     }
 }
-
-
 
 .tk-shsj {
     font-family: "source-han-serif-japanese",serif;
