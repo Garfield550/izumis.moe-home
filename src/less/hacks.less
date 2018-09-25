@@ -1,0 +1,31 @@
+@media only screen and (min-width : 1224px) {
+    // Firefox hack, only Firefox need this.
+    @supports (-moz-appearance: meterbar) {
+        .izumiAbout {
+            
+            .name {
+                position: relative;
+
+                rt {
+                    position: absolute;
+                    top: 0;
+                    left: 88%;
+                }
+            }
+        }
+    }
+
+    // Edge hack, only Microsoft Edge need this.
+    @supports (-ms-ime-align: auto) {
+        .izumiAbout {
+            
+            .name {
+                display: block;
+
+                rt {
+                    display: block;
+                }
+            }
+        }
+    }
+}
