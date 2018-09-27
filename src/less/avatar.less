@@ -3,12 +3,18 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-@media only screen and (min-width : 1224px) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     .avatar {
-        align-self: flex-end;
+        height: 70%;
+    }
+}
+
+@media only screen and (min-width : 1025px) {
+    .avatar {
+        height: 74.5%;
     }
 }
 
 .avatar {
-    height: 74.5%
+    align-self: flex-end;
 }

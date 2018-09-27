@@ -3,16 +3,59 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
+.izumiAbout {
+    display: flex;
+
+    .name {
+        white-space: nowrap;
+    }
+
+    .links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .izumiAbout {
+        flex-direction: column;
+
+        .name {
+            // font style
+            font-size: @font-base * 2.25;
+        }
+
+        .links {
+            
+            li {
+                margin-top: @font-base / 2;
+                margin-left: @font-base / 3;
+    
+                a {
+                    font-size: @font-base;
+                }
+            }
+        }
+    }
+}
+
 /* Desktops and laptops ----------- */
 // Like 1366 * 768
-@media only screen and (min-width : 1224px) {
+@media only screen and (min-width : 1025px) {
     .izumiAbout {
         flex-direction: row-reverse;
         align-items: center;
 
-        margin-right: 10%;
-        height: calc(@font-big * 4);
-
+        width: 100%;
+        
         .name {
             // font style
             font-size: @font-big;
@@ -37,40 +80,16 @@
     }
 }
 
+@media only screen and (min-width: 1224px) {
+    .izumiAbout {
+        margin-right: 10%;
+    }
+}
+
 /* Large screens ----------- */
 // Like 1920 * 1080
 @media only screen and (min-width : 1824px) {
     .izumiAbout {
-        margin-right: 16%;
+        margin-right: 14%;
     }
-}
-
-.izumiAbout {
-    display: flex;
-    width: 100%;
-
-    .name {
-        white-space: nowrap;
-    }
-
-    .links {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-.tk-shsj {
-    font-family: "source-han-serif-japanese",serif;
-}
-
-.tk-shnj {
-    font-family: "source-han-sans-japanese",sans-serif;
 }
