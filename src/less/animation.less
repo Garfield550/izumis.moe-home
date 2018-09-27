@@ -14,7 +14,63 @@
     }
 }
 
-@media only screen and (min-width : 1224px) {
+@keyframes moveDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .animation {
+        animation-name: moveDown;
+    }
+
+    .izumiAbout {
+        .name {
+            animation-delay: 0.8s;
+            animation-duration: 0.8s;
+        }
+    
+        .links {
+            li:nth-child(1) {
+                animation-delay: 1.6s;
+                animation-duration: 0.6s;
+            }
+    
+            li:nth-child(2) {
+                animation-delay: 2.2s;
+                animation-duration: 0.6s;
+            }
+    
+            li:nth-child(3) {
+                animation-delay: 2.8s;
+                animation-duration: 0.6s;
+            }
+    
+            li:nth-child(4) {
+                animation-delay: 3.4s;
+                animation-duration: 0.4s;
+            }
+    
+            li:nth-child(5) {
+                animation-delay: 3.8s;
+                animation-duration: 0.4s;
+            }
+    
+            li:nth-child(6) {
+                animation-delay: 4.2s;
+                animation-duration: 0.2s;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 1025px) {
     .animation {
         animation-name: moveLeft;
     }
