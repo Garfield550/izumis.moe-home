@@ -1,11 +1,24 @@
-@media only screen and (min-width : 1224px) {
-    // Firefox hack, only Firefox need this.
-    @supports (-moz-appearance: meterbar) {
+// Copyright (c) 2018 Garfield Lee
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+// Firefox hack, only Firefox need this.
+@supports (-moz-appearance: meterbar) {
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
         .izumiAbout {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width : 1025px) {
+        .izumiAbout {
+            margin-right: 36px;
             
             .name {
                 position: relative;
-
+    
                 rt {
                     position: absolute;
                     top: 0;
@@ -14,14 +27,17 @@
             }
         }
     }
+}
 
-    // Edge hack, only Microsoft Edge need this.
-    @supports (-ms-ime-align: auto) {
+// Edge hack, only Microsoft Edge need this.
+@supports (-ms-ime-align: auto) {
+
+    @media only screen and (min-width : 1025px) {
         .izumiAbout {
-            
+        
             .name {
                 display: block;
-
+    
                 rt {
                     display: block;
                 }
