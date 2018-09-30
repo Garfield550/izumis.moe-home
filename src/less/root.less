@@ -13,8 +13,30 @@
     justify-content: center;
 }
 
-@media only screen and (min-width : 1824px) {
+@media only screen
+and (min-width : 1824px) {
     #root {
         margin: auto 10%;
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (orientation: portrait) {
+    #root {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) {
+    #root {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
     }
 }

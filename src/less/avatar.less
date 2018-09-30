@@ -3,18 +3,33 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+.avatar {
+    align-self: flex-end;
+    height: 70%;
+}
+
+// iPhone
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (orientation: portrait) {
     .avatar {
-        height: 70%;
+        height: 50%;
     }
 }
 
-@media only screen and (min-width : 1025px) {
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) {
+    .avatar {
+        height: 60%;
+    }
+}
+
+@media only screen
+and (min-width : 1025px) {
     .avatar {
         height: 74.5%;
     }
-}
-
-.avatar {
-    align-self: flex-end;
 }

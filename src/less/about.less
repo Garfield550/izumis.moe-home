@@ -24,7 +24,96 @@
     }
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+// iPhone
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (orientation: portrait) {
+    .izumiAbout {
+        flex-direction: column;
+        align-self: flex-start;
+        margin-left: 10%;
+        margin-top: 20%;
+    
+        .name {
+            // font style
+            font-size: 3rem;
+        }
+    
+        .links {
+
+            li {
+                margin-top: 10px;
+                margin-left: 4px;
+        
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px)
+and (orientation: landscape) {
+    .izumiAbout {
+        flex-flow: column;
+        margin-right: 6%;
+
+        .name {
+            font-size: 3rem;
+        }
+
+        .links {
+
+            li {
+                margin-top: 6px;
+                margin-left: 4px;
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// iPad
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait) {
+    .izumiAbout {
+        flex-direction: column;
+        align-self: flex-start;
+        margin-left: 10%;
+        margin-top: 20%;
+    
+        .name {
+            // font style
+            font-size: 5rem;
+        }
+    
+        .links {
+
+            li {
+                margin-top: 10px;
+                margin-left: 4px;
+        
+                a {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
     .izumiAbout {
         flex-direction: column;
 
@@ -34,11 +123,11 @@
         }
 
         .links {
-            
+                
             li {
-                margin-top: @font-base / 2;
-                margin-left: @font-base / 3;
-    
+                margin-top: 10px;
+                margin-left: 4px;
+        
                 a {
                     font-size: @font-base;
                 }
@@ -49,13 +138,14 @@
 
 /* Desktops and laptops ----------- */
 // Like 1366 * 768
-@media only screen and (min-width : 1025px) {
+@media only screen
+and (min-width: 1025px) {
     .izumiAbout {
         flex-direction: row-reverse;
         align-items: center;
 
         width: 100%;
-        
+            
         .name {
             // font style
             font-size: @font-big;
@@ -67,7 +157,7 @@
             li {
                 margin-top: @font-base / 3;
                 margin-right: @font-base;
-    
+        
                 a {
                     font-size: @font-base;
                 }
@@ -80,7 +170,8 @@
     }
 }
 
-@media only screen and (min-width: 1224px) {
+@media only screen
+and (min-width: 1224px) {
     .izumiAbout {
         margin-right: 10%;
     }
@@ -88,7 +179,8 @@
 
 /* Large screens ----------- */
 // Like 1920 * 1080
-@media only screen and (min-width : 1824px) {
+@media only screen
+and (min-width : 1824px) {
     .izumiAbout {
         margin-right: 14%;
     }
