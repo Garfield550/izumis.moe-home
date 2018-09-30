@@ -31,12 +31,6 @@
     animation-fill-mode: both;
 }
 
-.avatar {
-    animation-name: moveLeft;
-    animation-delay: 0.8s;
-    animation-duration: 1s;
-}
-
 // iPhone
 @media only screen 
 and (min-device-width: 320px) 
@@ -61,10 +55,9 @@ and (orientation: landscape) {
 }
 
 // iPad
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) {
     .animation {
         animation-name: moveDown;
     }
@@ -78,4 +71,10 @@ and (orientation : landscape) {
     }
 
     .MOVELEFTTIME;
+}
+
+.avatar {
+    animation-name: moveLeft;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
 }
