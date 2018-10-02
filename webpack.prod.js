@@ -38,10 +38,16 @@ module.exports = Merge(Common, {
       chunkFilename: '[id].[chunkhash].css'
     }),
     new MediaQueryPlugin({
-      include: [ 'main'],
+      include: true,
       queries: {
-        'only screen and (min-width : 1224px)': 'des',
-        'only screen and (min-width : 1824px)': 'des'
+        'only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait)': 'p-p',
+        'only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape)': 'p-l',
+        'only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)': 't-p',
+        'only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)': 't-l',
+        'only screen and (min-device-width: 768px) and (max-device-width: 1024px)': 't',
+        'only screen and (min-width: 1025px)': 'd-sm',
+        'only screen and (min-width: 1224px)': 'd-md',
+        'only screen and (min-width: 1824px)': 'd-lg'
       }
     }),
     new CompressionPlugin({

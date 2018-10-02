@@ -8,8 +8,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -45,8 +44,16 @@ module.exports = {
       logo: './src/icon.jpg',
       title: '神楽坂泉',
       icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
         twitter: false,
-        windows: true
+        yandex: false,
+        windows: false
       }
     })
   ]
