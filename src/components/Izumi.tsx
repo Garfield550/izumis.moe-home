@@ -37,7 +37,7 @@ class Izumi extends React.Component<Props, {}> {
                     <IzumiName className="name wmvl tk-shsj animation" name={izumiName} kana={izumiKana} />
                     <IzumiLinks className="links wmvl tk-shnj" listClass="animation" links={izumiSocialLinks} />
                 </div>
-                <IzumiAvatar className="avatar animation d-01" path={Avatar} alt="Izumi avatar" />
+                <IzumiAvatar className="avatar" path={Avatar} alt="Izumi avatar" />
             </>
         );
     };
