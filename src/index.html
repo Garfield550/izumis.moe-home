@@ -13,13 +13,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <% htmlWebpackPlugin.files.css.forEach(function(cssFile) { %>
-        <link rel="stylesheet" href=<%= cssFile %>>
+        <link rel="stylesheet" href="<%= cssFile %>">
     <% }) %>
+    <% if (htmlWebpackPlugin.files.extracted.css) { %>
+        <% htmlWebpackPlugin.files.extracted.css.forEach(function(cssFile) { %>
+            <link rel="stylesheet" href="<%= cssFile.file %>" media="<%= cssFile.query %>">
+        <% }) %>
+    <% } %>
 </head>
 <body>
     <div id="root"></div>
     <% htmlWebpackPlugin.files.js.forEach(function(jsFile) { %>
-        <script src=<%= jsFile %>></script>
+        <script src="<%= jsFile %>"></script>
     <% }) %>
 </body>
 </html>
