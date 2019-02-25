@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "publish": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --config webpack.dev.js --open"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
